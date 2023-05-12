@@ -11,6 +11,7 @@ Se encuentra una simulación ya armada en Wokwi, un simulador online para alguno
 1. La función _muestreo_periodico_ se ejecuta periódicamente gracias a una interrupción por timer. Cada vez que se dispare, debe:
 
     a. Hacer una lectura con el ADC y guardar el valor en la variable _adc_reading_.
+    
     b. Calcular y guardar la temperatura leída del NTC en la variable _temperatura_.
 
 2. Descargar el _firmware.uf2_ e implementarlo en un circuito real.
