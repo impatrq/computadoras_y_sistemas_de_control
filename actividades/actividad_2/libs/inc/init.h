@@ -13,12 +13,22 @@ extern float temperatura;
 // Variable para guardar el valor del setpoint
 extern float setpoint;
 
-// GPIO de SDA
-#define SDA_GPIO  4
-#define SCL_GPIO  5
+// GPIOs de I2C
+#define SDA_GPIO    4
+#define SCL_GPIO    5
 // GPIOs analogicos
-#define NTC_GPIO  0
-#define SP_GPIO   1
+#define NTC_GPIO    0
+#define SP_GPIO     1
+// GPIOs para PWM
+#define CALOR_GPIO  15
+#define FRIO_GPIO   14
+
+// Constantes de configuracion de PWM
+#define CLK_DIV     1
+#define PWM_WRAP    1
+
+// Constantes para I2C
+#define SCL_FREQ    100 * 1000
 
 // Tiempo de refresco para el siete segmentos
 #define SLEEP_MS 10
