@@ -22,23 +22,8 @@ endif()
 # Initialize the Pico SDK
 pico_sdk_init()
 
-# Add libraries (remove comment to add)
-add_library(libs 
-	# Add libraries with ${LIBS}/FILENAME.c
-    ${LIBS}/lcd_i2c.c
-)
-
-# Include header files to library (remove commenta to add headers)
-target_include_directories(libs PUBLIC 
-    ${LIBS}/inc
-)
-
-# Link libraries with SDK (remove comments to link libraries)
-target_link_libraries(libs 
-	# Add library name to link
-    pico_stdlib
-    hardware_i2c
-)
+# Add library
+add_subdirectory(${LIBS} ${CMAKE_CURRENT_BINARY_DIR}/${LIBS})
 
 # Add the source files
 add_executable(${PROJECT_NAME}
@@ -55,7 +40,7 @@ target_link_libraries(${PROJECT_NAME}
     hardware_i2c
     hardware_adc
     # Remove next comment if libraries where added to the libs directory
-    libs
+    lcd
 	# Add other libraries used in the main file
 )
 
